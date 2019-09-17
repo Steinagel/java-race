@@ -10,8 +10,8 @@ package race_objects;
  * @author will_
  */
 public class Pilot {
-    String name;
-    float skill, resilience;
+    private String name;
+    private float skill, resilience;
     
     public Pilot(String name, 
                  float skill, 
@@ -19,5 +19,16 @@ public class Pilot {
         this.name       = name;
         this.skill      = skill;
         this.resilience = resilience;
+    }
+    
+    public Pilot(){
+        //DEFAULT 
+        this.name       = "Default pilot";
+        this.skill      = 5;
+        this.resilience = 5;
+    }
+    
+    public String Get_Name(){
+        return this.name;
     }
 }

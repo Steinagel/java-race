@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package race_event;
+import in_out_put.output.Output;
+import race_objects.*;
 
 /**
  *
@@ -11,4 +13,9 @@ package race_event;
  */
 public class End_Race {
     
+    private Output end_race;
+    
+    public static void Finish(Car[] car_array){
+        
+    }
 }

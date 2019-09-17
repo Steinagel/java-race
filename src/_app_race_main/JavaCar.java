@@ -5,20 +5,31 @@
  */
 package _app_race_main;
 import race_objects.*;
-
+import race_event.*;
 /**
  *
  * @author will_
  */
 public class JavaCar {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Pilot pilot = new Pilot("Herbert Richard", 8, 2);
-        Road road = new Road("Barcelona", 4f, 150, 3, 25);
-        Car car = new Car("Fusion", 206f, 2.1f, 140, road, pilot);
+        //CREATING ROAD
+        Road road = new Road("Barcelona", 4f, 1, 1, 25, 2);
+        //CREATING CAR1
+        Pilot HR = new Pilot("Herbert Richard", 10, 5);
+        Car FUSION = new Car("Fusion", 206f, 140, HR);
+        //CREATING CAR@
+        Pilot AH = new Pilot("Alamo Helf", 5, 2);
+        Car BUGATI = new Car("Bugati", 420f, 210, AH);
+        //CREATING ARRAY OF CARR WITH CAR1 AND CAR2
+        Car Car_Array[] = {FUSION};
+        
+        Start_Race.Run(Car_Array, road);
+        
+        End_Race.Finish(Car_Array);
+        
     }
     
 }
