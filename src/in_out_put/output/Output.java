@@ -21,14 +21,14 @@ public class Output {
         for(i=0;i<car.length;i++){
             System.out.printf("\tCar %d is a %s and its pilot is %s\n", 
                               (i+1), 
-                              car[i].Get_Model(), 
-                              car[i].Get_Pilot().Get_Name()
+                              car[i].GetModel(), 
+                              car[i].GetPilot().Get_Name()
                               );
         }
         System.out.println("Good luck!!");
     }
     
     public static void PrintCarStatus(Car car){
-        
+        System.out.println(car.GetCarStatus());
     }
 }

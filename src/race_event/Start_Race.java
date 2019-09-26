@@ -25,8 +25,10 @@ public class Start_Race {
                 if(!car.Finished(road.GetTotalSize()))
                     Output.PrintCarStatus(car);
                     car.Step();
-                    if(car.Finished(road.GetTotalSize()))
+                    if(car.Finished(road.GetTotalSize())){
                         car_cont+=1;
+                        System.out.println("One finixed");
+                    }
             }
         }
         
