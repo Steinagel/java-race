@@ -28,6 +28,7 @@ public class JavaCar {
         //STARTS RUN
         StarEndRace.Run(Car_Array, road);
         //ENDS RUN
+        Input_Car.WaitEnd();
     }
     
     private static Car[] InputCarByQuantity(int qtty){

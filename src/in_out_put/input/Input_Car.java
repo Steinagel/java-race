@@ -49,4 +49,11 @@ public class Input_Car {
         
         return qtty;
     }
+    
+    public static void WaitEnd(){
+        System.out.println("\n\nPressione qualquer tecla!");
+        Scanner scan = new Scanner(System.in);
+        scan.nextLine();
+    }
+            
 }
