@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package race_event;
-
+import java.util.ArrayList; 
 import race_objects.Car;
 import race_objects.Road;
 import in_out_put.output.Output;
@@ -14,23 +14,44 @@ import in_out_put.output.Output;
  */
 public class Start_Race {
     
-    Car[] array_car;
     
     public static void Run(Car[] array_car, Road road){
-        int i, car_cont=0;
+        ArrayList<Car> array_winner = new ArrayList<Car>();
+        
+        int i, car_cont=0, time=0;
         Output.PrintCars(array_car);
         
         while(!road.Finished(car_cont)){
-            for(Car car : array_car){
-                if(!car.Finished(road.GetTotalSize()))
-                    Output.PrintCarStatus(car);
-                    car.Step();
-                    if(car.Finished(road.GetTotalSize())){
-                        car_cont+=1;
-                        System.out.println("One finixed");
-                    }
+            PrintTime(time);
+            for(i=0; i< array_car.length; i++){
+                Output.PrintCarStatus(array_car[i]);
+                array_car[i].Step();
+                if(array_car[i].Finished(road.GetTotalSize()) && !array_car[i].GetFinished()){
+                    array_winner.add(array_car[i]);
+                    car_cont+=1;
+                    array_car[i].SetFinished();
+                    array_car[i].SetPlace(car_cont);
+                }
             }
+            System.out.println();
+            time++;
+        }
+        for(Car c:array_winner){
+            System.out.print(c.toString());
         }
         
+        Output.ShowEnd(array_winner, time);
+        
+    }
+    
+    private static void PrintTime(int t){
+        String stamp;
+        stamp = t+"s ";
+        if(t>=60)
+            stamp = (int)(t/60)+"m ";
+        if(t>=3600)
+            stamp = (int)(t/3600)+"h ";
+
+        System.out.print(stamp);
     }
 }

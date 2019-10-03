@@ -10,9 +10,13 @@ package race_objects;
  * @author will_
  */
 public class Road {
-    private String name;
-    private float difficulty;
-    private int size, laps, max_cars, cars_to_run;
+    private String  name;
+    
+    private float   difficulty;
+    
+    private int     size, 
+                    laps, 
+                    cars_to_run;
     
     /**
      * This class represents the road of a race
@@ -26,26 +30,34 @@ public class Road {
     public Road(String name,
                 float difficulty, 
                 int size, 
-                int laps, 
-                int cars,
+                int laps,
                 int cars_to_run){
         this.name           = name;
         this. difficulty    = difficulty;
         this.size           = size * 1000;
         this.laps           = laps;
-        this.max_cars       = cars;
-        this.cars_to_run = cars_to_run;
+        this.cars_to_run    = cars_to_run;
+    }
+    
+     public Road(String name,
+                float difficulty, 
+                int size, 
+                int laps){
+        this.name           = name;
+        this. difficulty    = difficulty;
+        this.size           = size * 1000;
+        this.laps           = laps;
     }
     
     public int GetTotalSize(){
-        return size*laps;
+        return (size * laps);
     }
     
     public void SetCars(int cars_to_run){
-        this.cars_to_run=cars_to_run;
+        this.cars_to_run = cars_to_run;
     }
     
     public boolean Finished(int finished_cars){
-        return finished_cars==this.cars_to_run;
+        return (finished_cars == this.cars_to_run);
     }
 }

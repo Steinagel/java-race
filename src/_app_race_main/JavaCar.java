@@ -16,7 +16,7 @@ public class JavaCar {
      */
     public static void main(String[] args) {
         //CREATING ROAD
-        Road road = new Road("Barcelona", 4f, 500, 10, 25, 2);
+        Road road = new Road("Barcelona", 4f, 10, 10, 2);
         //CREATING CAR1
         Pilot HR = new Pilot("Herbert Richard", 10, 5);
         Car FUSION = new Car("Fusion", 206f, 140, HR);
@@ -24,7 +24,7 @@ public class JavaCar {
         Pilot AH = new Pilot("Alamo Helf", 5, 2);
         Car BUGATI = new Car("Bugati", 420f, 210, AH);
         //CREATING ARRAY OF CARR WITH CAR1 AND CAR2
-        Car Car_Array[] = {BUGATI, FUSION};
+        Car[] Car_Array = new Car[] {BUGATI, FUSION};
         
         Start_Race.Run(Car_Array, road);
         

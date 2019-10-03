@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package in_out_put.output;
-
+import java.util.ArrayList; 
 import race_objects.Car;
 import race_objects.Pilot;
 /**
@@ -17,18 +17,25 @@ public class Output {
     
     public static void PrintCars(Car car[]){
         int i;
+        
         System.out.println("Cars:");
-        for(i=0;i<car.length;i++){
+        for(i=0;i<car.length;i++)
             System.out.printf("\tCar %d is a %s and its pilot is %s\n", 
                               (i+1), 
                               car[i].GetModel(), 
-                              car[i].GetPilot().Get_Name()
-                              );
-        }
+                              car[i].GetPilot().GetName());
+        
         System.out.println("Good luck!!");
     }
     
     public static void PrintCarStatus(Car car){
-        System.out.println(car.GetCarStatus());
+        System.out.print(car.toString());
+    }
+    
+    public static void ShowEnd(ArrayList<Car> cars, int time){
+        System.out.println("\n\nTotal time: "+time+"s");
+        cars.forEach((car) ->{
+            System.out.println(car.FinalResult());
+        });
     }
 }
