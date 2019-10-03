@@ -4,11 +4,16 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/race_objects/Car.java</file>
+            <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/in_out_put/input/Input_Pilot.java</file>
             <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/race_objects/Pilot.java</file>
+            <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/in_out_put/input/Input_Car.java</file>
             <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/race_objects/Road.java</file>
             <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/in_out_put/output/Output.java</file>
-            <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/race_event/Start_Race.java</file>
             <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/_app_race_main/JavaCar.java</file>
+            <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/in_out_put/input/Input_Road.java</file>
+            <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/race_event/StarEndRace.java</file>
+            <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/in_out_put/input/Global.java</file>
+            <file>file:/C:/Users/will_/Desktop/Faculdade/POO/java-car/java-race/src/car/utils/Random.java</file>
         </group>
     </open-files>
 </project-private>

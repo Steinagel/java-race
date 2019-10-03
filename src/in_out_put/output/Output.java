@@ -5,8 +5,7 @@
  */
 package in_out_put.output;
 import java.util.ArrayList; 
-import race_objects.Car;
-import race_objects.Pilot;
+import race_objects.*;
 /**
  *
  * @author will_
@@ -15,9 +14,10 @@ public class Output {
     
     Car car[];
     
-    public static void PrintCars(Car car[]){
+    public static void PrintCars(Car car[], Road road){
         int i;
         
+        System.out.println("Pista: "+road.toString());
         System.out.println("Cars:");
         for(i=0;i<car.length;i++)
             System.out.printf("\tCar %d is a %s and its pilot is %s\n", 
@@ -33,7 +33,7 @@ public class Output {
     }
     
     public static void ShowEnd(ArrayList<Car> cars, int time){
-        System.out.println("\n\nTotal time: "+time+"s");
+        System.out.println("\n\nTotal time: "+time+"s"+"/"+(int)(time/60)+"m");
         cars.forEach((car) ->{
             System.out.println(car.FinalResult());
         });

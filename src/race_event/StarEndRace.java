@@ -12,14 +12,14 @@ import in_out_put.output.Output;
  *
  * @author will_
  */
-public class Start_Race {
+public class StarEndRace {
     
     
     public static void Run(Car[] array_car, Road road){
         ArrayList<Car> array_winner = new ArrayList<Car>();
         
         int i, car_cont=0, time=0;
-        Output.PrintCars(array_car);
+        Output.PrintCars(array_car, road);
         
         while(!road.Finished(car_cont)){
             PrintTime(time);

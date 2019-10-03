@@ -12,10 +12,10 @@ package race_objects;
 public class Road {
     private String  name;
     
-    private float   difficulty;
+    private float   difficulty,
+                    size;
     
-    private int     size, 
-                    laps, 
+    private int     laps, 
                     cars_to_run;
     
     /**
@@ -34,7 +34,7 @@ public class Road {
                 int cars_to_run){
         this.name           = name;
         this. difficulty    = difficulty;
-        this.size           = size * 1000;
+        this.size           = size;
         this.laps           = laps;
         this.cars_to_run    = cars_to_run;
     }
@@ -45,11 +45,16 @@ public class Road {
                 int laps){
         this.name           = name;
         this. difficulty    = difficulty;
-        this.size           = size * 1000;
+        this.size           = size;
         this.laps           = laps;
     }
+     
+    @Override
+    public String toString(){
+        return this.name;
+    }
     
-    public int GetTotalSize(){
+    public float GetTotalSize(){
         return (size * laps);
     }
     

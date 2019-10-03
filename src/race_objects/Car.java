@@ -68,6 +68,9 @@ public class Car {
     public Pilot GetPilot(){
         return this.pilot;
     }
+    public void SetPilot(Pilot pilot){
+        this.pilot = pilot;
+    }
     public float GetVel(){
         return this.vel_at;
     }
@@ -95,9 +98,9 @@ public class Car {
     
     @Override
     public String toString(){
-        if(finish) return(model+" finished! \t");
-        if(fueling) return(model+" is fueling! \t");
-        String stamp = model+" "+(int)vel_at+"km/h\t";
+        if(finish) return(model+" finished! \t ");
+        if(fueling) return(model+" is fueling!  \t ");
+        String stamp = model+" "+(int)vel_at+"km/h \t ";
         return (stamp);
     }
     
@@ -149,14 +152,14 @@ public class Car {
         fuel_at-=(vel_at*0.1f)/100;
     }
     
-    public boolean Finished(int total_size){
+    public boolean Finished(float total_size){
         return this.dist_at>=total_size;
     }
     
     public String FinalResult(){
 
         String vel =(int)vel_max_record+"km/h\t";
-        String stamp = place+" Place: "+pilot.GetName()+" - Time: "+total_time+"s Record: "+vel;
+        String stamp = place+" Place: "+pilot.GetName()+" - Time: "+total_time+"s Record: "+vel+" Dist: "+dist_at+"m/"+(int)(dist_at/1000)+"km";
         return (stamp);
     }
         

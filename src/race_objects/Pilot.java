@@ -30,6 +30,11 @@ public class Pilot {
         this.resilience = 5;
     }
     
+    @Override
+    public String toString(){
+        return this.name;
+    }
+    
     public String GetName(){
         return this.name;
     }
